@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    # this just pulls your main branch
+    - /usr/bin/git pull origin main
