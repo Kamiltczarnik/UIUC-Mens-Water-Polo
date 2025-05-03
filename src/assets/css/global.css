@@ -1,0 +1,44 @@
+:root {
+  --orange: #FF6600;
+  --blue: #13294B;
+}
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--blue);
+}
+.header, .footer {
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.nav {
+  display: none;
+}
+.nav--open {
+  display: block;
+}
+.btn {
+  background: var(--orange);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 0.5rem;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+footer .contact, footer .social, footer .link {
+  flex: 1;
+  text-align: center;
+}
+.player-grid, .coach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
