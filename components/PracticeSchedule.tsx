@@ -1,8 +1,7 @@
 export default function PracticeSchedule() {
   const practices = [
-    { day: "Monday", time: "7:00 PM - 9:00 PM", location: "ARC Outdoor Pool" },
-    { day: "Wednesday", time: "7:00 PM - 9:00 PM", location: "ARC Outdoor Pool" },
-    { day: "Friday", time: "6:00 PM - 8:00 PM", location: "ARC Outdoor Pool" },
+    { day: "Monday", time: "8:30 PM - 10:00 PM", location: "ARC Outdoor Pool" },
+    { day: "Thursday", time: "8:30 PM - 10:00 PM", location: "ARC Outdoor Pool" },
   ]
 
   return (

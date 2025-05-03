@@ -8,7 +8,6 @@ export default function PracticeInfo() {
     <div className="container mx-auto px-4 py-8">
       <PageHeader title="Practice Info" />
       <PracticeSchedule />
-      <LocationMap />
       <GearChecklist />
     </div>
   )

@@ -5,8 +5,8 @@ export default function DirectContact() {
       <div className="space-y-2">
         <p>
           <span className="font-bold">Email:</span>{" "}
-          <a href="mailto:waterpolo@illinois.edu" className="text-[#E84A27] hover:underline">
-            waterpolo@illinois.edu
+          <a href="mailto:illinimenswaterpolo@gmail.com" className="text-[#E84A27] hover:underline">
+          illinoismenswaterpolo@gmail.com
           </a>
         </p>
         <p>
