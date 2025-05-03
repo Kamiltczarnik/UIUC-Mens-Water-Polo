@@ -18,7 +18,7 @@ export default function Header() {
             alt="Illinois Logo"
             width={40}      // adjust this to taste (40px here)
             height={40}     // keep both equal for a perfect square
-            className="object-contain mr-3" // spacing to the text
+            className="object-contain mr-1" // spacing to the text
           />
           <span className="font-bold text-sm">MEN'S WATER POLO</span>
         </Link>

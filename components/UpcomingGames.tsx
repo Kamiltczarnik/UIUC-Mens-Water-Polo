@@ -1,23 +1,29 @@
 export default function UpcomingGames() {
   const games = [
     {
-      date: "Mon, 25",
-      opponent: "Northwestern",
-      location: "ARC Outdoor Pool",
-      homeAway: "Home",
-    },
-    {
-      date: "Tue, 30",
-      opponent: "Michigan State",
-      location: "ARC Outdoor Pool",
-      homeAway: "Home",
-    },
-    {
-      date: "Wed, 21",
-      opponent: "Iowa",
-      location: "SFC Rebrous, AM",
-      homeAway: "Away",
-    },
+      date: "TBD",
+      opponent: "TBD",
+      location: "TBD",
+      homeAway: "TBD",
+    }
+    // {
+    //   date: "Mon, 25",
+    //   opponent: "Northwestern",
+    //   location: "ARC Outdoor Pool",
+    //   homeAway: "Home",
+    // },
+    // {
+    //   date: "Tue, 30",
+    //   opponent: "Michigan State",
+    //   location: "ARC Outdoor Pool",
+    //   homeAway: "Home",
+    // },
+    // {
+    //   date: "Wed, 21",
+    //   opponent: "Iowa",
+    //   location: "SFC Rebrous, AM",
+    //   homeAway: "Away",
+    // },
   ]
 
   return (
