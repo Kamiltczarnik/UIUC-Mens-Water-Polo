@@ -1,1 +1,12 @@
 node_modules
+# Build output
+.next/
+build/
+dist/
+.vite/
+
+# Next.js/React/Webpack hot update files
+**/*.hot-update.*
+.next/
+# Hot update files
+**/*.hot-update.*
