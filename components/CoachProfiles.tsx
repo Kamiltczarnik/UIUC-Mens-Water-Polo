@@ -7,7 +7,7 @@ export default function ExecBoard() {
     { id: 3, name: "Andrew Czech", role: "Treasurer", image: "/images/exec/andrew.jpeg" },
     { id: 4, name: "Frank Krklus", role: "Secretary", image: "/images/exec/frank.jpg" },
     { id: 5, name: "Kamil Czarnik", role: "Co-Social Chair / Tech Chair", image: "/images/exec/Kamil.jpg" },
-    { id: 6, name: "Vasilije Djuranovic", role: "Co-Social Chair", image: "/images/blocki.png" },
+    { id: 6, name: "Vasilije Djuranovic", role: "Co-Social Chair", image: "/images/exec/vas.JPG" },
     { id: 7, name: "Matthew Czech", role: "Co-Captain", image: "/images/exec/Czech.png" },
     { id: 8, name: "Hugo Allaume", role: "Co-Captain / Membership Director", image: "/images/exec/hugo.jpg" },
   ]
