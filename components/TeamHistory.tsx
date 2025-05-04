@@ -22,6 +22,9 @@ export default function TeamHistory() {
     { year: 2024, finish: "8th" },
   ]
 
+  // Create a copy sorted descending by year
+  const sortedPerformance = [...performanceData].sort((a, b) => b.year - a.year)
+
   const bigTenTeams = [
     { name: "University of Illinois", logo: "/images/logos/illinois.png" },
     { name: "Indiana University", logo: "/images/logos/indiana.png" },
@@ -41,18 +44,22 @@ export default function TeamHistory() {
           Team History and Mission
         </h2>
         <p className="text-gray-700 mb-4 ">
-          The University of Illinois Men's Water Polo team has a rich history dating back to its founding in 1985. As a
-          competitive club sport, we represent the Fighting Illini in tournaments across the Midwest and nationally.
-        </p>
-        <p className="text-gray-700">
-          Our mission is to promote the sport of water polo while developing leadership, teamwork, and athletic
-          excellence. We welcome players of all skill levels who are committed to improving and competing at a high level.
+          We are a group of men at the University of Illinois who enjoy the sport of
+          water polo and the camaraderie of the team. We practice both fall and spring
+          semesters with our fall semester acting as our season. During the fall semester,
+          we practice 3-4 nights per week and travel to three Big Ten tournaments from
+          late September to end of October to compete for the Big Ten Division title.
+          The spring semester is our off-season in which we practice about 2 nights a week.
+          We also co-host a tournament of our own and travel to a couple tournaments outside
+          of the Big Ten.
         </p>
       </div>
 
       {/* Conference Finishes */}
       <section>
-        <h3 className="text-xl font-bold text-[#13294B] mb-4 text-center">B1G Ten Conference Finishes</h3>
+        <h3 className="text-xl font-bold text-[#13294B] mb-4 text-center">
+          B1G Ten Conference Finishes
+        </h3>
         <div className="overflow-x-auto">
           <table className="min-w-full border-collapse">
             <thead>
@@ -62,7 +69,7 @@ export default function TeamHistory() {
               </tr>
             </thead>
             <tbody>
-              {performanceData.map((row) => (
+              {sortedPerformance.map((row) => (
                 <tr key={row.year} className="even:bg-gray-100">
                   <td className="px-4 py-2">{row.year}</td>
                   <td className="px-4 py-2">{row.finish}</td>
@@ -75,7 +82,9 @@ export default function TeamHistory() {
 
       {/* Big Ten Conference Teams */}
       <section>
-        <h3 className="text-xl font-bold text-[#13294B] mb-4 text-center">Big Ten Conference Teams</h3>
+        <h3 className="text-xl font-bold text-[#13294B] mb-4 text-center">
+          Big Ten Conference Teams
+        </h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
           {bigTenTeams.map((team) => (
             <div key={team.name} className="flex flex-col items-center space-y-2">

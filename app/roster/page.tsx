@@ -5,14 +5,14 @@ import Image from 'next/image';
 // Example player data
 const players = [
   { id: 1, capNumber: '1', firstName: 'Daniel', lastName: 'Schacht', grade: 'Sr.', position: 'Goalie', image: 'images/roster/Daniel.png', travelTeam: true, exec: false },
-  { id: 2, capNumber: '1A', firstName: 'Ethan', lastName: 'Nicolls', grade: 'Ms.', position: 'Goalie', image: 'images/roster/Ethan.png', travelTeam: true, exec: false },
+  { id: 2, capNumber: '1A', firstName: 'Ethan', lastName: 'Nicolls', grade: 'MS.', position: 'Goalie', image: 'images/roster/Ethan.png', travelTeam: true, exec: false },
   { id: 3, capNumber: '2', firstName: 'Adrian', lastName: 'Lam', grade: 'So.', position: 'Point / Center D', image: 'images/roster/Adrian.png', travelTeam: true, exec: false },
   { id: 4, capNumber: '3', firstName: 'Jake', lastName: 'Lehman', grade: 'Sr.', position: 'Point / Center D', image: 'images/roster/JakeLehman.png', travelTeam: true, exec: true },
   { id: 5, capNumber: '4', firstName: 'Martin', lastName: 'Polomsky', grade: 'So.', position: 'Point / Center D', image: 'images/roster/Martin.png', travelTeam: true, exec: false },
   { id: 6, capNumber: '5', firstName: 'Javier', lastName: 'Garcia Mainieri', grade: 'Phd.', position: 'Whole set', image: 'images/roster/Javi.png', travelTeam: true, exec: false },
   { id: 7, capNumber: '6', firstName: 'Joe', lastName: 'Shapiro', grade: 'Jr.', position: 'Swimmer', image: 'images/roster/JoeShapiro.png', travelTeam: true, exec: true },
   { id: 8, capNumber: '7', firstName: 'Kamil', lastName: 'Czarnik', grade: 'Sr.', position: 'Heat Checker', image: 'images/roster/KamilCzarnik.JPG', travelTeam: true, exec: true },
-  { id: 9, capNumber: '8', firstName: 'Patrick', lastName: 'Alonso', grade: 'Ms.', position: 'Utility', image: 'images/roster/PatrickAlonso.png', travelTeam: true, exec: false },
+  { id: 9, capNumber: '8', firstName: 'Patrick', lastName: 'Alonso', grade: 'MS.', position: 'Utility', image: 'images/roster/PatrickAlonso.png', travelTeam: true, exec: false },
   { id: 10, capNumber: '9', firstName: 'Mathew', lastName: 'Czech', grade: 'Sr.', position: 'Utility', image: 'images/roster/Matthew.png', travelTeam: true, exec: false },
   { id: 11, capNumber: '10', firstName: 'Charlie', lastName: 'Wang', grade: 'Sr.', position: 'Point / Center D', image: 'images/roster/CharlieWang.png', travelTeam: true, exec: false },
   { id: 12, capNumber: '11', firstName: 'Hugo', lastName: 'Allaume', grade: 'Sr.', position: 'Utility / Whole set', image: 'images/exec/hugo.jpg', travelTeam: true, exec: false },
@@ -84,7 +84,8 @@ export default function Roster() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        <div className="mb-6 flex items-center gap-3">
+        {/* Travel only button code */}
+        {/* <div className="mb-6 flex items-center gap-3">
           <span className="text-gray-700 text-base font-medium">Show only Travel Team</span>
           <button
             type="button"
@@ -100,7 +101,7 @@ export default function Roster() {
               }`}
             />
           </button>
-        </div>
+        </div> */}
         <div className="overflow-x-auto rounded-lg">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-100 sticky top-0 z-10">

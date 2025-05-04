@@ -55,7 +55,7 @@ export default function ContactForm() {
             type="email"
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
             required
