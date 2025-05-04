@@ -7,6 +7,5 @@ dist/
 
 # Next.js/React/Webpack hot update files
 **/*.hot-update.*
-.next/
 # Hot update files
 **/*.hot-update.*
