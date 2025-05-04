@@ -1,35 +1,63 @@
 "use client"
 
+import { Poppins } from 'next/font/google'
 import Link from "next/link"
 import Image from "next/image"
 import { Menu } from "lucide-react"
 import { useState } from "react"
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400','600'],
+  variable: '--font-poppins'
+})
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const navItems = [
+    ['About', '/about'],
+    ['Practice Info', '/practice-info'],
+    ['Schedule', '/schedule'],
+    ['Roster', '/roster'],
+    ['Contact', '/contact'],
+  ]
+
   return (
-    <header className="bg-[#13294B] text-white py-4">
+    <header className={`${poppins.variable} font-sans bg-[#13294B] text-white py-4`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          {/* Directly size the Image component */}
           <Image
             src="/images/blocki.png"
             alt="Illinois Logo"
-            width={40}      // adjust this to taste (40px here)
-            height={40}     // keep both equal for a perfect square
-            className="object-contain mr-3" // spacing to the text
+            width={40}
+            height={40}
+            className="object-contain mr-2"
           />
-          <span className="font-bold text-sm">MEN'S WATER POLO</span>
+          <span className="font-bold text-lg">MEN'S WATER POLO</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          <Link href="/about" className="hover:text-[#E84A27]">About</Link>
-          <Link href="/practice-info" className="hover:text-[#E84A27]">Practice Info</Link>
-          <Link href="/schedule" className="hover:text-[#E84A27]">Schedule</Link>
-          <Link href="/roster" className="hover:text-[#E84A27]">Roster</Link>
-          <Link href="/contact" className="hover:text-[#E84A27]">Contact</Link>
+        <nav className="hidden md:flex space-x-4">
+          {navItems.map(([label, href]) => (
+            <Link
+              key={href}
+              href={href}
+              className="
+                relative px-2 py-1
+                font-semibold uppercase tracking-wide
+                text-white
+                before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px]
+                before:bg-[#E84A27]
+                before:transition-all before:duration-300
+                hover:before:w-full
+                transform transition-transform duration-200
+                hover:scale-110
+              "
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -40,14 +68,27 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-[#13294B] py-4 px-4">
-          <div className="flex flex-col space-y-4">
-            <Link href="/about" className="hover:text-[#E84A27]" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link href="/practice-info" className="hover:text-[#E84A27]" onClick={() => setIsMenuOpen(false)}>Practice Info</Link>
-            <Link href="/schedule" className="hover:text-[#E84A27]" onClick={() => setIsMenuOpen(false)}>Schedule</Link>
-            <Link href="/roster" className="hover:text-[#E84A27]" onClick={() => setIsMenuOpen(false)}>Roster</Link>
-            <Link href="/contact" className="hover:text-[#E84A27]" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-          </div>
+        <nav className="md:hidden bg-[#13294B] py-4 px-4 space-y-2">
+          {navItems.map(([label, href]) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setIsMenuOpen(false)}
+              className="
+                block px-4 py-2
+                font-medium uppercase tracking-wide
+                text-white
+                transform transition-transform duration-200
+                hover:scale-105
+                before:absolute before:bottom-2 before:left-4 before:w-0 before:h-[2px]
+                before:bg-[#E84A27]
+                before:transition-all before:duration-300
+                hover:before:w-full
+              "
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
       )}
     </header>

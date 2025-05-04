@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -91,4 +92,18 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* 1) Make the “page” container white, but everything else blue */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--blue) !important;
+  overscroll-behavior-y: none;     /* disables rubber-band bounce */
+}
+
+/* 2) Keep your content area white */
+main, .page {
+  background-color: #fff;
 }
