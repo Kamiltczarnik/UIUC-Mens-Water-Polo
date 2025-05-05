@@ -5,7 +5,10 @@ Need to Do:
 10. Figure out where to put images
 12. Delete whitespace on home page or add a carousel of images
 13. Add to practice info or remove it and add something else
-14. Add Lazy Loading
+14. Add Lazy Loading to initial launch and scrolling
+15. Add on dynamic hovering to icons
+16. Add admin panel route to allow for easy editing to the website
+17. Make the gallery photos link based images being hosted somewhere else besides local
 
 
 Kind of Completed (Need Opinions):
