@@ -12,7 +12,7 @@ export default function DirectContact() {
         <p>
           <span className="font-bold">Phone:</span>{" "}
           <a href="tel:2173331000" className="text-[#E84A27] hover:underline">
-            (217) 333-1000
+            (217)-333-1000
           </a>
         </p>
       </div>
