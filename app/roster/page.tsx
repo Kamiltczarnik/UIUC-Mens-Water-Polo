@@ -387,25 +387,8 @@ export default function Roster() {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        {/* Travel only button code */}
-        {/* <div className="mb-6 flex items-center gap-3">
-          <span className="text-gray-700 text-base font-medium">Show only Travel Team</span>
-          <button
-            type="button"
-            aria-pressed={showTravelOnly}
-            onClick={() => setShowTravelOnly((v) => !v)}
-            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${
-              showTravelOnly ? 'bg-[#FF5F05]' : 'bg-gray-300'
-            }`}
-          >
-            <span
-              className={`inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
-                showTravelOnly ? 'translate-x-5' : 'translate-x-1'
-              }`}
-            />
-          </button>
-        </div> */}
-        <div className="overflow-x-auto rounded-lg">
+        {/* Responsive: Table for md+ screens, cards for mobile */}
+        <div className="hidden md:block overflow-x-auto rounded-lg">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-100 sticky top-0 z-10">
               <tr>
@@ -460,6 +443,49 @@ export default function Roster() {
               ))}
             </tbody>
           </table>
+        </div>
+        {/* Mobile card layout */}
+        <div className="md:hidden grid grid-cols-1 gap-4">
+          {filtered.length === 0 && (
+            <div className="text-center text-gray-500 py-8">
+              No players found.
+            </div>
+          )}
+          {filtered.map((p) => (
+            <div
+              key={p.id}
+              className="flex items-center bg-white rounded-lg shadow p-3 gap-3">
+              <PlayerAvatar image={p.image} />
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-[#13294B] text-base">
+                    {p.firstName} {p.lastName}
+                  </span>
+                  {p.travelTeam && (
+                    <span className="px-2 py-0.5 rounded-full bg-[#FF5F05] text-white text-xs font-semibold">
+                      Travel
+                    </span>
+                  )}
+                  {p.exec && (
+                    <span className="px-2 py-0.5 rounded-full bg-[#13294B] text-white text-xs font-semibold">
+                      Exec
+                    </span>
+                  )}
+                </div>
+                <div className="text-sm text-gray-700">Grade: {p.grade}</div>
+                {p.travelTeam && p.position && (
+                  <div className="text-sm text-gray-700">
+                    Position: {p.position}
+                  </div>
+                )}
+                {p.capNumber && (
+                  <div className="text-xs text-gray-500 mt-1">
+                    #{p.capNumber}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
