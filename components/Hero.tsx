@@ -96,15 +96,6 @@ export default function HomePage() {
             Photo {current + 1} of {carouselImages.length}
           </div>
         </div>
-        {/* View Full Gallery Button */}
-        <div className="flex justify-center mt-6">
-          <a
-            href="/gallery"
-            className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-[#FF5F05] transition"
-          >
-            View Full Gallery &rarr;
-          </a>
-        </div>
       </section>
     </div>
   );
