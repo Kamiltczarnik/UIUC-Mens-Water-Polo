@@ -5,7 +5,7 @@ export default function UpcomingGames() {
       opponent: "TBD",
       location: "TBD",
       homeAway: "TBD",
-    }
+    },
     // {
     //   date: "Mon, 25",
     //   opponent: "Northwestern",
@@ -24,7 +24,7 @@ export default function UpcomingGames() {
     //   location: "SFC Rebrous, AM",
     //   homeAway: "Away",
     // },
-  ]
+  ];
 
   return (
     <div className="mb-12">
@@ -40,7 +40,9 @@ export default function UpcomingGames() {
           </thead>
           <tbody>
             {games.map((game, index) => (
-              <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+              <tr
+                key={index}
+                className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
                 <td className="py-3 px-4 border-b">{game.date}</td>
                 <td className="py-3 px-4 border-b">{game.opponent}</td>
                 <td className="py-3 px-4 border-b">{game.homeAway}</td>
@@ -50,5 +52,5 @@ export default function UpcomingGames() {
         </table>
       </div>
     </div>
-  )
+  );
 }
