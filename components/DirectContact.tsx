@@ -10,10 +10,10 @@ export default function DirectContact() {
           </a>
         </p>
         <p>
-          <span className="font-bold">Phone:</span>{" "}
+          {/* <span className="font-bold">Phone:</span>{" "}
           <a href="tel:2173331000" className="text-[#E84A27] hover:underline">
-            (217) 333-1000
-          </a>
+            (217)-333-1000
+          </a> */}
         </p>
       </div>
     </div>
