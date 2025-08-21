@@ -1,5 +1,5 @@
 export default function GearChecklist() {
-  const gearItems = ["Water polo suit", "Cap", "Goggles", "Towel", "Water bottle"]
+  const gearItems = ["Water polo suit", "Goggles", "Towel", "Water bottle"]
 
   return (
     <div className="mb-12">
