@@ -8,7 +8,7 @@ export default function PracticeSchedule() {
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-[#13294B] mb-2">
-        Weekly Practice Schedule (Starting Tuesday September 2)
+        Weekly Practice Schedule (Fall 2025)
       </h2>
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <table className="min-w-full">

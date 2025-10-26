@@ -20,6 +20,7 @@ export default function TeamHistory() {
     { year: 2022, finish: "7th" },
     { year: 2023, finish: "8th" },
     { year: 2024, finish: "8th" },
+    { year: 2025, finish: "8th" }
   ]
 
   // Create a copy sorted descending by year

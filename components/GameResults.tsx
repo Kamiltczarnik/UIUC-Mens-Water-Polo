@@ -1,8 +1,38 @@
 "use client"
 
 export default function SeasonResults() {
-  const season = "2024-2025"
-  const tournaments = [
+  const currentSeason = "2025-2026"
+  const currentSeasonGames = [
+    {
+      name: "Big 10 Championships - October 25-26",
+      games: [
+        { date: "Oct 25", opponent: "Purdue", score: "L 9-11" },
+        { date: "Oct 25", opponent: "Iowa", score: "L 12-13 (OT)" },
+        { date: "Oct 26", opponent: "Michigan State 'B'", score: "L 8-11" },
+      ],
+    },
+    {
+      name: "University of Iowa Tournament - October 4-5",
+      games: [
+        { date: "Oct 4", opponent: "Indiana 'A'", score: "W 9-8" },
+        { date: "Oct 4", opponent: "Iowa", score: "L 15-16 (OT)" },
+        { date: "Oct 5", opponent: "Indiana 'A'", score: "L 14-8" },
+        { date: "Oct 5", opponent: "Indiana 'B'", score: "W 16-5" },
+      ],
+    },
+    {
+      name: "Ohio State University Tournament - September 20-21",
+      games: [
+        { date: "Sep 20", opponent: "Purdue", score: "L 10-5" },
+        { date: "Sep 20", opponent: "Michigan State 'A'", score: "L 14-7" },
+        { date: "Sep 21", opponent: "Michigan State 'B'", score: "W 11-2" },
+        { date: "Sep 21", opponent: "Ohio State", score: "L 15-8" },
+      ],
+    },
+  ]
+
+  const previousSeason = "2024-2025"
+  const previousSeasonGames = [
     {
       name: "Ohio State University Tournament",
       games: [
@@ -33,41 +63,105 @@ export default function SeasonResults() {
 
   return (
     <div className="mb-12 space-y-12">
-      <h2 className="text-2xl font-bold text-[#13294B]">
-        {season} Season Results
-      </h2>
+      {/* Current Season */}
+      <div>
+        <h2 className="text-2xl font-bold text-[#13294B] mb-6">
+          {currentSeason} Season Results
+        </h2>
 
-      {tournaments.map((tourn) => (
-        <section
-          key={tourn.name}
-          className="bg-white shadow-md rounded-lg overflow-hidden"
-        >
-          <h3 className="bg-[#13294B] text-white px-4 py-2 text-lg font-semibold">
-            {tourn.name}
-          </h3>
-          <table className="min-w-full">
-            <thead className="bg-[#13294B] text-white">
-              <tr>
-                <th className="py-3 px-4 text-left">Date</th>
-                <th className="py-3 px-4 text-left">Opponent</th>
-                <th className="py-3 px-4 text-left">Result</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tourn.games.map((game, i) => (
-                <tr
-                  key={i}
-                  className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                >
-                  <td className="py-3 px-4 border-b">{game.date}</td>
-                  <td className="py-3 px-4 border-b">{game.opponent}</td>
-                  <td className="py-3 px-4 border-b">{game.score}</td>
+        {currentSeasonGames.map((tourn, idx) => (
+          <section
+            key={idx}
+            className="bg-white shadow-md rounded-lg overflow-hidden mb-6"
+          >
+            <h3 className="bg-[#13294B] text-white px-4 py-2 text-lg font-semibold">
+              {tourn.name}
+            </h3>
+            <table className="min-w-full">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="py-3 px-4 text-left text-gray-700 font-semibold">Date</th>
+                  <th className="py-3 px-4 text-left text-gray-700 font-semibold">Opponent</th>
+                  <th className="py-3 px-4 text-left text-gray-700 font-semibold">Result</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-      ))}
+              </thead>
+              <tbody>
+                {tourn.games.map((game, i) => {
+                  const isWin = game.score.startsWith('W')
+                  const isLoss = game.score.startsWith('L')
+                  
+                  return (
+                    <tr
+                      key={i}
+                      className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                    >
+                      <td className="py-3 px-4 border-b text-gray-800">{game.date}</td>
+                      <td className="py-3 px-4 border-b text-gray-800">{game.opponent}</td>
+                      <td className="py-3 px-4 border-b">
+                        <span className={`font-semibold ${
+                          isWin ? 'text-green-600' : isLoss ? 'text-red-600' : 'text-gray-600'
+                        }`}>
+                          {game.score}
+                        </span>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </section>
+        ))}
+      </div>
+
+      {/* Previous Season */}
+      <div>
+        <h2 className="text-2xl font-bold text-[#13294B] mb-6">
+          Previous Season Results
+        </h2>
+
+        {previousSeasonGames.map((tourn, idx) => (
+          <section
+            key={idx}
+            className="bg-white shadow-md rounded-lg overflow-hidden mb-6 opacity-75"
+          >
+            <h3 className="bg-gray-600 text-white px-4 py-2 text-lg font-semibold">
+              {tourn.name}
+            </h3>
+            <table className="min-w-full">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="py-3 px-4 text-left text-gray-700 font-semibold">Date</th>
+                  <th className="py-3 px-4 text-left text-gray-700 font-semibold">Opponent</th>
+                  <th className="py-3 px-4 text-left text-gray-700 font-semibold">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tourn.games.map((game, i) => {
+                  const isWin = game.score.startsWith('W')
+                  const isLoss = game.score.startsWith('L')
+                  
+                  return (
+                    <tr
+                      key={i}
+                      className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                    >
+                      <td className="py-3 px-4 border-b text-gray-800">{game.date}</td>
+                      <td className="py-3 px-4 border-b text-gray-800">{game.opponent}</td>
+                      <td className="py-3 px-4 border-b">
+                        <span className={`font-semibold ${
+                          isWin ? 'text-green-600' : isLoss ? 'text-red-600' : 'text-gray-600'
+                        }`}>
+                          {game.score}
+                        </span>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </section>
+        ))}
+      </div>
     </div>
   )
 }

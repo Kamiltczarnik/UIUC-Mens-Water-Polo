@@ -114,16 +114,6 @@ export default function ContactPage() {
 
           {/* Right Column - Info Boxes */}
           <div className="space-y-6">
-            {/* Quad Day Box */}
-            <div className="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-[#FF5F05]">
-              <h3 className="text-xl font-bold text-[#13294B] mb-4">Meet Us on Quad Day!</h3>
-              <p className="text-gray-700 mb-4">
-                Come learn more about the team and meet current players!
-              </p>
-              <div className="bg-[#13294B] text-white px-4 py-2 rounded-lg inline-block">
-                <span className="font-semibold">Sunday, August 24th</span>
-              </div>
-            </div>
 
             {/* GroupMe Box */}
             <div className="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-[#13294B]">

@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
-// Example player data
-const players = [
+// 2024-2025 Roster (Old)
+const players2024 = [
   {
     id: 1,
     capNumber: "1",
@@ -325,6 +325,451 @@ const players = [
   },
 ];
 
+// 2025-2026 Roster (Current)
+const players2025 = [
+  {
+    id: 1,
+    capNumber: "1",
+    firstName: "Daniel",
+    lastName: "Schacht",
+    grade: "Sr.",
+    position: "Goalie",
+    image: "/images/roster/Daniel.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 2,
+    capNumber: "1A",
+    firstName: "Anthony",
+    lastName: "Petrashko",
+    grade: "Sr.",
+    position: "Goalie",
+    image: "/images/roster/AnthonyPetrashenko.PNG",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 3,
+    capNumber: "2",
+    firstName: "Nadav",
+    lastName: "Efrat",
+    grade: "So.",
+    position: "Utility",
+    image: "/images/roster/Nadav.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 4,
+    capNumber: "3",
+    firstName: "Mathew",
+    lastName: "Czech",
+    grade: "Sr.",
+    position: "Utility",
+    image: "/images/roster/Matthew.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 5,
+    capNumber: "4",
+    firstName: "Roy",
+    lastName: "Otamura",
+    grade: "So.",
+    position: "Utility",
+    image: "/images/roster/Roy.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 6,
+    capNumber: "5",
+    firstName: "Charlie",
+    lastName: "Wang",
+    grade: "Graduate",
+    position: "Point / Whole D",
+    image: "/images/roster/CharlieWang.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 7,
+    capNumber: "6",
+    firstName: "Joe",
+    lastName: "Shapiro",
+    grade: "Jr.",
+    position: "Utility",
+    image: "/images/roster/JoeShapiro.png",
+    travelTeam: true,
+    exec: true,
+  },
+  {
+    id: 8,
+    capNumber: "7",
+    firstName: "Kamil",
+    lastName: "Czarnik",
+    grade: "Sr.",
+    position: "Utility",
+    image: "/images/roster/KamilCzarnik.JPG",
+    travelTeam: true,
+    exec: true,
+  },
+  {
+    id: 9,
+    capNumber: "8",
+    firstName: "Javier",
+    lastName: "Garcia Mainieri",
+    grade: "Graduate",
+    position: "Whole Set",
+    image: "/images/roster/Javi.png",
+    travelTeam: true,
+    exec: false,
+  },
+  // {
+  //   id: 10,
+  //   capNumber: "9",
+  //   firstName: "",
+  //   lastName: "",
+  //   grade: "",
+  //   position: "",
+  //   image: "",
+  //   travelTeam: false,
+  //   exec: false,
+  // },
+  {
+    id: 11,
+    capNumber: "10",
+    firstName: "Jake",
+    lastName: "Lehman",
+    grade: "Sr.",
+    position: "Point / Whole D",
+    image: "/images/roster/JakeLehman.png",
+    travelTeam: true,
+    exec: true,
+  },
+  {
+    id: 12,
+    capNumber: "11",
+    firstName: "Hugo",
+    lastName: "Allaume",
+    grade: "Sr.",
+    position: "Whole Set",
+    image: "/images/exec/hugo.jpg",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 13,
+    capNumber: "12",
+    firstName: "Frank",
+    lastName: "Krklus",
+    grade: "Sr.",
+    position: "Utility",
+    image: "/images/roster/FrankKrklus.png",
+    travelTeam: true,
+    exec: true,
+  },
+  {
+    id: 14,
+    capNumber: "13",
+    firstName: "Jack",
+    lastName: "Walberer",
+    grade: "Graduate",
+    position: "Utility",
+    image: "/images/roster/JackWalberer.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 15,
+    capNumber: "14",
+    firstName: "Martin",
+    lastName: "Polomsky",
+    grade: "So.",
+    position: "Point / Whole D",
+    image: "/images/roster/Martin.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 16,
+    capNumber: "15",
+    firstName: "Alan",
+    lastName: "Jiang",
+    grade: "Jr.",
+    position: "Utility",
+    image: "/images/roster/Alan.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 17,
+    capNumber: "16",
+    firstName: "Mac",
+    lastName: "Mika",
+    grade: "Fr.",
+    position: "Utility",
+    image: "/images/roster/Mac.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 18,
+    capNumber: "17",
+    firstName: "Avi",
+    lastName: "Winick",
+    grade: "Sr.",
+    position: "Mascot",
+    image: "/images/roster/Avi.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 19,
+    capNumber: "18",
+    firstName: "Vasilije",
+    lastName: "Djuranovic",
+    grade: "So.",
+    position: "Utility",
+    image: "/images/roster/Vas.png",
+    travelTeam: true,
+    exec: true,
+  },
+  {
+    id: 20,
+    capNumber: "19",
+    firstName: "Henrique",
+    lastName: "Coelho",
+    grade: "Fr.",
+    position: "Whole Set",
+    image: "/images/roster/Henrique.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 21,
+    capNumber: "20",
+    firstName: "Patrick",
+    lastName: "Alonso",
+    grade: "Graduate",
+    position: "Utility",
+    image: "/images/roster/PatrickAlonso.png",
+    travelTeam: true,
+    exec: false,
+  },
+  // {
+  //   id: 22,
+  //   capNumber: "21",
+  //   firstName: "",
+  //   lastName: "",
+  //   grade: "",
+  //   position: "",
+  //   image: "",
+  //   travelTeam: false,
+  //   exec: false,
+  // },
+  {
+    id: 23,
+    capNumber: "22",
+    firstName: "Drew",
+    lastName: "Morgan",
+    grade: "Fr.",
+    position: "Utility",
+    image: "/images/roster/Drew.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 24,
+    capNumber: "25",
+    firstName: "Anthony",
+    lastName: "Zebron",
+    grade: "Fr.",
+    position: "Utility",
+    image: "/images/roster/Lebron.png",
+    travelTeam: true,
+    exec: false,
+  },
+  {
+    id: 25,
+    capNumber: "E",
+    firstName: "Andrew",
+    lastName: "Czech",
+    grade: "So.",
+    position: "Manager",
+    image: "/images/roster/Andrew.png",
+    travelTeam: false,
+    exec: true,
+  },
+  // Non-travel team players who paid dues
+  {
+    id: 26,
+    capNumber: "",
+    firstName: "Peter",
+    lastName: "Thompson",
+    grade: "Sr.",
+    position: "",
+    image: "/images/roster/PeterThompson.PNG",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 27,
+    capNumber: "",
+    firstName: "Will",
+    lastName: "Rendall",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 28,
+    capNumber: "",
+    firstName: "Lazar",
+    lastName: "Mirkovic",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 29,
+    capNumber: "",
+    firstName: "Gabriel",
+    lastName: "Aguila",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 30,
+    capNumber: "",
+    firstName: "Terry",
+    lastName: "Ryson",
+    grade: "Graduate",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 31,
+    capNumber: "",
+    firstName: "Ethan",
+    lastName: "Nicolls",
+    grade: "Graduate",
+    position: "",
+    image: "/images/roster/Ethan.png",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 32,
+    capNumber: "",
+    firstName: "Stephen",
+    lastName: "Hersh",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 33,
+    capNumber: "",
+    firstName: "Gabe",
+    lastName: "Alpher",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 34,
+    capNumber: "",
+    firstName: "Patrick",
+    lastName: "Mojsa",
+    grade: "Sr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 35,
+    capNumber: "",
+    firstName: "David",
+    lastName: "Hampton",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 36,
+    capNumber: "",
+    firstName: "Porter",
+    lastName: "Donohue",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 37,
+    capNumber: "",
+    firstName: "Luke",
+    lastName: "Helsdingen",
+    grade: "Jr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 38,
+    capNumber: "",
+    firstName: "Adrian",
+    lastName: "Rosales",
+    grade: "So.",
+    position: "",
+    image: "/images/roster/AdrianRosales.PNG",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 39,
+    capNumber: "",
+    firstName: "Ethan",
+    lastName: "Chan",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+  {
+    id: 40,
+    capNumber: "",
+    firstName: "Konrad",
+    lastName: "Kremper",
+    grade: "Fr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
+];
+
 function PlayerAvatar({ image }: { image?: string }) {
   return (
     <div className="relative flex items-center">
@@ -365,6 +810,9 @@ function PlayerAvatar({ image }: { image?: string }) {
 export default function Roster() {
   const [search, setSearch] = useState("");
   const [showTravelOnly, setShowTravelOnly] = useState(false);
+  const [selectedSeason, setSelectedSeason] = useState("2025-2026");
+
+  const players = selectedSeason === "2025-2026" ? players2025 : players2024;
 
   const filtered = players.filter(
     (p) =>
@@ -377,7 +825,31 @@ export default function Roster() {
   return (
     <div className="min-h-screen bg-gray-50 py-10">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8">
-        <h1 className="text-3xl font-bold text-[#13294B] mb-8">Team Roster</h1>
+        <div className="flex justify-between items-center mb-8">
+          <h1 className="text-3xl font-bold text-[#13294B]">Team Roster</h1>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setSelectedSeason("2025-2026")}
+              className={`px-4 py-2 rounded-lg font-semibold transition ${
+                selectedSeason === "2025-2026"
+                  ? "bg-[#13294B] text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              2025-2026
+            </button>
+            <button
+              onClick={() => setSelectedSeason("2024-2025")}
+              className={`px-4 py-2 rounded-lg font-semibold transition ${
+                selectedSeason === "2024-2025"
+                  ? "bg-[#13294B] text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              2024-2025
+            </button>
+          </div>
+        </div>
         <div className="mb-8">
           <input
             type="text"
