@@ -308,7 +308,7 @@ const players2024 = [
     lastName: "Petrashko",
     grade: "Sr.",
     position: "",
-    image: "/images/roster/AnthonyPetrashenko.PNG",
+    image: "/images/roster/AnthonyPetrashko.jpg",
     travelTeam: false,
     exec: false,
   },
@@ -345,7 +345,7 @@ const players2025 = [
     lastName: "Petrashko",
     grade: "Sr.",
     position: "Goalie",
-    image: "/images/roster/AnthonyPetrashenko.PNG",
+    image: "/images/roster/AnthonyPetrashko.jpg",
     travelTeam: true,
     exec: false,
   },
@@ -768,6 +768,17 @@ const players2025 = [
     travelTeam: false,
     exec: false,
   },
+  {
+    id: 41,
+    capNumber: "",
+    firstName: "Al",
+    lastName: "Pakronis",
+    grade: "Jr.",
+    position: "",
+    image: "",
+    travelTeam: false,
+    exec: false,
+  },
 ];
 
 function PlayerAvatar({ image }: { image?: string }) {
@@ -819,7 +830,7 @@ export default function Roster() {
       (!showTravelOnly || p.travelTeam) &&
       `${p.capNumber} ${p.firstName} ${p.lastName} ${p.grade} ${p.position}`
         .toLowerCase()
-        .includes(search.toLowerCase())
+        .includes(search.toLowerCase()),
   );
 
   return (
@@ -834,8 +845,7 @@ export default function Roster() {
                 selectedSeason === "2025-2026"
                   ? "bg-[#13294B] text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
-            >
+              }`}>
               2025-2026
             </button>
             <button
@@ -844,8 +854,7 @@ export default function Roster() {
                 selectedSeason === "2024-2025"
                   ? "bg-[#13294B] text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
-            >
+              }`}>
               2024-2025
             </button>
           </div>

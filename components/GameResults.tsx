@@ -4,7 +4,15 @@ export default function SeasonResults() {
   const currentSeason = "2025-2026"
   const currentSeasonGames = [
     {
-      name: "Big 10 Championships - October 25-26",
+      name: "Wild Bill Home Tournament",
+      dateRange: "February 13-15",
+      games: [
+        { date: "Feb 13-15", opponent: "—", score: "No results / tournament canceled early" },
+      ],
+    },
+    {
+      name: "Big 10 Championships",
+      dateRange: "October 25-26",
       games: [
         { date: "Oct 25", opponent: "Purdue", score: "L 9-11" },
         { date: "Oct 25", opponent: "Iowa", score: "L 12-13 (OT)" },
@@ -12,7 +20,8 @@ export default function SeasonResults() {
       ],
     },
     {
-      name: "University of Iowa Tournament - October 4-5",
+      name: "University of Iowa Tournament",
+      dateRange: "October 4-5",
       games: [
         { date: "Oct 4", opponent: "Indiana 'A'", score: "W 9-8" },
         { date: "Oct 4", opponent: "Iowa", score: "L 15-16 (OT)" },
@@ -21,7 +30,8 @@ export default function SeasonResults() {
       ],
     },
     {
-      name: "Ohio State University Tournament - September 20-21",
+      name: "Ohio State University Tournament",
+      dateRange: "September 20-21",
       games: [
         { date: "Sep 20", opponent: "Purdue", score: "L 10-5" },
         { date: "Sep 20", opponent: "Michigan State 'A'", score: "L 14-7" },
@@ -34,16 +44,17 @@ export default function SeasonResults() {
   const previousSeason = "2024-2025"
   const previousSeasonGames = [
     {
-      name: "Ohio State University Tournament",
+      name: "Big Ten Division Championship",
+      dateRange: "October 26-27, 2024",
       games: [
-        { date: "Sep 14", opponent: "Purdue", score: "L 9-5" },
-        { date: "Sep 14", opponent: "Michigan", score: "L 16-11" },
-        { date: "Sep 15", opponent: "Michigan State", score: "L 16-6" },
-        { date: "Sep 15", opponent: "Ohio State", score: "L 14-7" },
+        { date: "Oct 26", opponent: "Michigan", score: "L 19-3" },
+        { date: "Oct 26", opponent: "Iowa", score: "L 15-14" },
+        { date: "Oct 26", opponent: "Wisconsin", score: "L 12-11" },
       ],
     },
     {
       name: "University of Iowa Tournament",
+      dateRange: "October 5-6, 2024",
       games: [
         { date: "Oct 5", opponent: "Iowa", score: "L 19-13" },
         { date: "Oct 5", opponent: "Indiana", score: "L 18-10" },
@@ -52,11 +63,13 @@ export default function SeasonResults() {
       ],
     },
     {
-      name: "Big Ten Division Championship",
+      name: "Ohio State University Tournament",
+      dateRange: "September 14-15, 2024",
       games: [
-        { date: "Oct 26", opponent: "Michigan", score: "L 19-3" },
-        { date: "Oct 26", opponent: "Iowa", score: "L 15-14" },
-        { date: "Oct 26", opponent: "Wisconsin", score: "L 12-11" },
+        { date: "Sep 14", opponent: "Purdue", score: "L 9-5" },
+        { date: "Sep 14", opponent: "Michigan", score: "L 16-11" },
+        { date: "Sep 15", opponent: "Michigan State", score: "L 16-6" },
+        { date: "Sep 15", opponent: "Ohio State", score: "L 14-7" },
       ],
     },
   ]
@@ -74,9 +87,10 @@ export default function SeasonResults() {
             key={idx}
             className="bg-white shadow-md rounded-lg overflow-hidden mb-6"
           >
-            <h3 className="bg-[#13294B] text-white px-4 py-2 text-lg font-semibold">
-              {tourn.name}
-            </h3>
+            <div className="bg-[#13294B] text-white px-4 py-3">
+              <h3 className="text-lg font-semibold">{tourn.name}</h3>
+              <p className="text-sm opacity-90 mt-0.5">{tourn.dateRange}</p>
+            </div>
             <table className="min-w-full">
               <thead className="bg-gray-100">
                 <tr>
@@ -124,9 +138,10 @@ export default function SeasonResults() {
             key={idx}
             className="bg-white shadow-md rounded-lg overflow-hidden mb-6 opacity-75"
           >
-            <h3 className="bg-gray-600 text-white px-4 py-2 text-lg font-semibold">
-              {tourn.name}
-            </h3>
+            <div className="bg-gray-600 text-white px-4 py-3">
+              <h3 className="text-lg font-semibold">{tourn.name}</h3>
+              <p className="text-sm opacity-90 mt-0.5">{tourn.dateRange}</p>
+            </div>
             <table className="min-w-full">
               <thead className="bg-gray-100">
                 <tr>
