@@ -4,58 +4,58 @@ export default function ExecBoard() {
   const members = [
     {
       id: 1,
-      name: "Joe Shapiro",
-      role: "President",
-      image: "/images/exec/joe.png",
-    },
-    {
-      id: 2,
-      name: "Jake Lehman",
-      role: "Vice President",
-      image: "/images/exec/jake.JPG",
-    },
-    {
-      id: 3,
       name: "Andrew Czech",
-      role: "Treasurer",
+      role: "President",
       image: "/images/exec/andrew.jpeg",
     },
     {
-      id: 4,
-      name: "Frank Krklus",
-      role: "Secretary",
-      image: "/images/exec/frank.jpg",
-    },
-    {
-      id: 5,
-      name: "Kamil Czarnik",
-      role: "Co-Social Chair / Tech Chair",
-      image: "/images/exec/Kamil.jpg",
-    },
-    {
-      id: 6,
+      id: 2,
       name: "Vasilije Djuranovic",
-      role: "Co-Social Chair",
+      role: "Vice President",
       image: "/images/exec/vas.JPG",
     },
     {
+      id: 3,
+      name: "Mac Mika",
+      role: "Treasurer",
+      image: null,
+    },
+    {
+      id: 4,
+      name: "Joe Shapiro",
+      role: "Secretary",
+      image: "/images/exec/joe.png",
+    },
+    {
+      id: 5,
+      name: "Gabriel Aguila",
+      role: "Co-Social Chair",
+      image: null,
+    },
+    {
+      id: 6,
+      name: "Henrique Coelho",
+      role: "Co-Social Chair",
+      image: null,
+    },
+    {
       id: 7,
-      name: "Matthew Czech",
+      name: "Roy Otamura",
       role: "Co-Captain",
-      image: "/images/exec/Czech.png",
+      image: null,
     },
     {
       id: 8,
-      name: "Hugo Allaume",
-      role: "Co-Captain / Membership Director",
-      image: "/images/exec/hugo.jpg",
+      name: "Martin Polomsky",
+      role: "Co-Captain",
+      image: null,
     },
   ];
 
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-[#13294B] mb-6">
-        2025-2026 Executive Board
+        2026-2027 Executive Board
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {members.map((member) => (
@@ -63,12 +63,18 @@ export default function ExecBoard() {
             key={member.id}
             className="bg-gray-100 rounded-lg p-4 flex flex-col items-center">
             <div className="relative w-32 h-32 mb-4">
-              <Image
-                src={member.image || "/placeholder.svg"}
-                alt={member.name}
-                fill
-                className="object-cover rounded-full"
-              />
+              {member.image ? (
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover rounded-full"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center rounded-full border-2 border-dashed border-gray-300 bg-white px-3 text-center text-xs text-gray-500">
+                  Photo coming soon
+                </div>
+              )}
             </div>
             <h3 className="text-xl font-bold text-[#13294B]">{member.name}</h3>
             <p className="text-gray-700 text-sm whitespace-nowrap overflow-hidden truncate w-full text-center">

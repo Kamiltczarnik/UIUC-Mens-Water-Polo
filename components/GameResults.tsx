@@ -4,6 +4,23 @@ export default function SeasonResults() {
   const currentSeason = "2025-2026"
   const currentSeasonGames = [
     {
+      name: "Northwestern Tournament",
+      dateRange: "March 7-8, 2026",
+      games: [
+        { date: "Mar 7-8", opponent: "—", score: "Results not recorded" },
+      ],
+    },
+    {
+      name: "Iowa State Tournament",
+      dateRange: "February 28-March 1, 2026",
+      games: [
+        { date: "Feb 28", opponent: "Iowa", score: "Result not recorded" },
+        { date: "Feb 28", opponent: "Northwestern", score: "Result not recorded" },
+        { date: "Feb 28", opponent: "Kentucky", score: "Result not recorded" },
+        { date: "Mar 1", opponent: "Iowa State", score: "Result not recorded" },
+      ],
+    },
+    {
       name: "Wild Bill Home Tournament",
       dateRange: "February 13-15",
       games: [
