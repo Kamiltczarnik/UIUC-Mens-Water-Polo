@@ -1,13 +1,14 @@
 export default function PracticeSchedule() {
   const practices = [
     { day: "Monday", time: "8:30 PM - 10:00 PM", location: "ARC Indoor Pool" },
+    { day: "Tuesday", time: "8:30 PM - 10:00 PM", location: "ARC Indoor Pool" },
     { day: "Thursday", time: "8:30 PM - 10:00 PM", location: "ARC Indoor Pool" },
   ];
 
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-[#13294B] mb-2">
-        Weekly Practice Schedule (Spring 2026)
+        Weekly Practice Schedule (Fall 2026)
       </h2>
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <table className="min-w-full">

@@ -1,4 +1,5 @@
 import type React from "react";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -6,10 +7,21 @@ import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Illini Men's Water Polo | Illinois Club Water Polo | UIUC Water Polo",
+export const metadata: Metadata = {
+  title: "Illini Men's Water Polo | University of Illinois",
   description:
     "Official website for Illini Men's Water Polo at the University of Illinois Urbana-Champaign. Illinois club water polo, UIUC men's water polo, Illini water polo, and more. Find our schedule, roster, news, and contact info.",
+  icons: {
+    icon: [
+      {
+        url: "/images/blocki-icon-large.png",
+        type: "image/png",
+        sizes: "384x384",
+      },
+    ],
+    shortcut: "/images/blocki-icon-large.png",
+    apple: "/images/blocki-icon-large.png",
+  },
   keywords: [
     "illini men's water polo",
     "illinois club water polo",
@@ -25,8 +37,7 @@ export const metadata = {
     "illini water polo club",
   ].join(", "),
   openGraph: {
-    title:
-      "Illini Men's Water Polo | Illinois Club Water Polo | UIUC Water Polo",
+    title: "Illini Men's Water Polo | University of Illinois",
     description:
       "Official website for Illini Men's Water Polo at the University of Illinois Urbana-Champaign. Illinois club water polo, UIUC men's water polo, Illini water polo, and more.",
     url: "https://illinimenswopo.web.illinois.edu/",

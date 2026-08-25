@@ -122,15 +122,16 @@ export default function ContactPage() {
                 Stay connected with the team and get updates on practices, games, and events!
               </p>
               
-              {/* QR Code Section */}
+              {/* QR Code */}
               <div className="text-center mb-6">
-                <div className="bg-gray-100 p-4 rounded-lg inline-block">
+                <div className="inline-block rounded-lg p-4">
                   <Image
-                    src="/images/groupme-qr-code.png"
+                    src="/images/groupme-preview-original.png"
                     alt="GroupMe QR Code - Scan to join our group"
-                    width={192}
-                    height={192}
-                    className="rounded-lg"
+                    width={240}
+                    height={240}
+                    priority
+                    className="h-60 w-60 rounded-lg bg-black object-contain"
                   />
                 </div>
               </div>
@@ -138,7 +139,7 @@ export default function ContactPage() {
               {/* GroupMe Link */}
               <div className="text-center">
                 <a
-                  href="https://groupme.com/join_group/109361144/rdJLhQgs"
+                  href="https://groupme.com/join_group/116790929/jgpe4gHC"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#00AFF0] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0098D6] transition"
