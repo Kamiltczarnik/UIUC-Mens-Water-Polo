@@ -11,6 +11,7 @@ const defaultCrops: Record<number, Crop> = {
   6: { zoom: 1.15, x: 50, y: 50 },
   7: { zoom: 1.2, x: 57, y: 50 },
   8: { zoom: 2.4, x: 40, y: 0 },
+  9: { zoom: 1, x: 50, y: 50 },
 };
 
 export default function ExecBoard() {
@@ -63,6 +64,12 @@ export default function ExecBoard() {
       role: "Co-Captain",
       image: "/images/exec/martin-2026.jpg",
     },
+    {
+      id: 9,
+      name: "Matthew Czech",
+      role: "Co-Captain",
+      image: "/images/exec/Czech.png",
+    },
   ];
 
   return (
@@ -70,7 +77,7 @@ export default function ExecBoard() {
       <h2 className="mb-6 text-2xl font-bold text-[#13294B]">
         2026-2027 Executive Board
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {members.map((member) => {
           const crop = defaultCrops[member.id];
           return <div
