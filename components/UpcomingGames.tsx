@@ -16,12 +16,12 @@ const tournaments: Tournament[] = [
   {
     name: "West Conference Tournament",
     location: "University of Iowa, Iowa City, IA",
-    dates: "October 10-12, 2026",
+    dates: "October 10-11, 2026",
     games: [
       { day: "Saturday, Oct. 10", time: "11:00 AM", matchup: "University of Iowa vs University of Illinois" },
       { day: "Saturday, Oct. 10", time: "1:10 PM", matchup: "University of Illinois vs Indiana University" },
-      { day: "Sunday, Oct. 12", time: "9:15 AM", matchup: "University of Illinois vs Indiana University" },
-      { day: "Sunday, Oct. 12", time: "1:00 PM", matchup: "University of Iowa vs University of Illinois" },
+      { day: "Sunday, Oct. 11", time: "9:15 AM", matchup: "University of Illinois vs Indiana University" },
+      { day: "Sunday, Oct. 11", time: "1:00 PM", matchup: "University of Iowa vs University of Illinois" },
     ],
   },
   {

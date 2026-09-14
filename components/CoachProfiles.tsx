@@ -66,7 +66,7 @@ export default function ExecBoard() {
     },
     {
       id: 9,
-      name: "Matthew Czech",
+      name: "Mathew Czech",
       role: "Co-Captain",
       image: "/images/exec/Czech.png",
     },
