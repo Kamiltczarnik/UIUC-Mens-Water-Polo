@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://illinimenswopo.web.illinois.edu"),
   title: "Illini Men's Water Polo | University of Illinois",
   description:
     "Official website for Illini Men's Water Polo at the University of Illinois Urbana-Champaign. Illinois club water polo, UIUC men's water polo, Illini water polo, and more. Find our schedule, roster, news, and contact info.",
