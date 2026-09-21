@@ -1,6 +1,9 @@
 node_modules
 # Build output
 .next/
+.next-backup/
+out-backup/
+*.tsbuildinfo
 build/
 dist/
 .vite/
