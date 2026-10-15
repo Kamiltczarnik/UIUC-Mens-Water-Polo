@@ -1,18 +1,7 @@
 import Image from "next/image";
+import { execPhotoCrops } from "@/lib/exec-photo-crops";
 
-type Crop = { zoom: number; x: number; y: number };
 
-const defaultCrops: Record<number, Crop> = {
-  1: { zoom: 1.2, x: 50, y: 50 },
-  2: { zoom: 1.05, x: 50, y: 64 },
-  3: { zoom: 1.25, x: 50, y: 60 },
-  4: { zoom: 1, x: 38, y: 9 },
-  5: { zoom: 1.35, x: 50, y: 9 },
-  6: { zoom: 1.15, x: 50, y: 50 },
-  7: { zoom: 1.2, x: 57, y: 50 },
-  8: { zoom: 2.4, x: 40, y: 0 },
-  9: { zoom: 1, x: 50, y: 50 },
-};
 
 export default function ExecBoard() {
   const members = [
@@ -66,7 +55,7 @@ export default function ExecBoard() {
     },
     {
       id: 9,
-      name: "Matthew Czech",
+      name: "Mathew Czech",
       role: "Co-Captain",
       image: "/images/exec/Czech.png",
     },
@@ -79,7 +68,7 @@ export default function ExecBoard() {
       </h2>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {members.map((member) => {
-          const crop = defaultCrops[member.id];
+          const crop = execPhotoCrops[member.image];
           return <div
             key={member.id}
             className="bg-gray-100 rounded-lg p-4 flex flex-col items-center">

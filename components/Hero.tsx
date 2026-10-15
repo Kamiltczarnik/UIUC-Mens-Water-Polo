@@ -1,100 +1,43 @@
-'use client';
-import { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const carouselImages = [
-  '/images/team-highlights/wild-bill2025.jpeg',
-  '/images/team-highlights/Iowa-teampic.jpeg',
-  '/images/team-highlights/wild-bill2024.JPG',
-  
+const highlights = [
+  { image: "/images/team-highlights/wild-bill2025.jpeg", title: "Wild Bill 2025" },
+  { image: "/images/team-highlights/Iowa-teampic.jpeg", title: "On the road at Iowa" },
+  { image: "/images/team-highlights/wild-bill2024.JPG", title: "Wild Bill 2024" },
 ];
 
-export default function HomePage() {
-  const [current, setCurrent] = useState(0);
-
-  // Simple carousel logic
-  const next = () => setCurrent((c) => (c + 1) % carouselImages.length);
-  const prev = () => setCurrent((c) => (c - 1 + carouselImages.length) % carouselImages.length);
-
+export default function Hero() {
   return (
-    <div>
-      {/* Hero Image */}
-      <section className="relative w-full h-[500px] md:h-[600px]">
-        <Image
-          src="/images/OSU-2025.jpeg"
-          alt="UIUC Men's Water Polo"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
-          <span className="text-2xl md:text-3xl text-white mb-2 font-semibold tracking-wide">
-            Welcome to
-          </span>
-          <h1 className="text-4xl md:text-6xl text-white font-bold text-center drop-shadow-lg">
-            UIUC Men's Water Polo
-          </h1>
+    <div className="bg-[#faf9f6] text-[#13294B]">
+      <section className="mx-auto grid max-w-7xl lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="flex flex-col justify-center px-6 py-14 sm:px-12 sm:py-20 lg:py-24">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">University of Illinois Urbana-Champaign</p>
+          <div className="mb-6 h-1 w-12 bg-[#FF5F05]" />
+          <h1 className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">Illinois<br />Men’s Water Polo</h1>
+          <div className="mt-8 flex flex-wrap items-center gap-6">
+            <Link href="/practice-info/" className="inline-flex min-h-12 items-center gap-3 rounded bg-[#13294B] px-6 py-3 font-semibold text-white transition hover:bg-[#203e67] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF5F05]">Join the Team <ArrowRight size={18} aria-hidden="true" /></Link>
+            <Link href="/about/" className="py-3 font-semibold underline decoration-[#FF5F05] underline-offset-8 hover:text-[#c44700]">Get to know us</Link>
+          </div>
+        </div>
+        <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[500px]">
+          <Image src="/images/OSU-2025.jpeg" alt="Illinois men’s water polo team together at Ohio State" fill priority sizes="(min-width: 1024px) 55vw, 100vw" className="object-contain" />
         </div>
       </section>
-
-      {/* Carousel Section */}
-      <section className="py-12">
-        <div className="flex items-center justify-center max-w-5xl mx-auto mb-4 px-2">
-          <h2 className="text-3xl font-bold text-center flex-1">Team Highlights</h2>
+      <section aria-label="Explore the team" className="border-y border-slate-200 bg-white">
+        <div className="mx-auto grid max-w-7xl divide-y divide-slate-200 md:grid-cols-3 md:divide-x md:divide-y-0">
+          {[
+            { title: "Practice with us", detail: "Find practice times and what to bring.", href: "/practice-info/" },
+            { title: "Follow the season", detail: "Tournament schedules and game results.", href: "/schedule/" },
+            { title: "Meet the roster", detail: "The players representing Illinois.", href: "/roster/" },
+          ].map((item) => <Link key={item.href} href={item.href} className="group flex items-center justify-between gap-4 px-6 py-7 transition hover:bg-slate-50 sm:px-10"><div><h2 className="text-lg font-bold">{item.title}</h2><p className="mt-1 text-sm text-slate-600">{item.detail}</p></div><ArrowRight aria-hidden="true" size={20} className="shrink-0 text-[#FF5F05] transition-transform group-hover:translate-x-1" /></Link>)}
         </div>
-        <div className="relative max-w-5xl mx-auto bg-white rounded-xl flex items-center justify-center h-[350px] md:h-[400px] border border-gray-200 overflow-hidden">
-          {/* Left Arrow */}
-          <button
-            onClick={prev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100 z-10"
-            aria-label="Previous"
-          >
-            &#8592;
-          </button>
-          {/* Image */}
-          {carouselImages.length > 0 ? (
-            <div className="relative w-full h-full">
-              <Image
-                src={carouselImages[current]}
-                alt={`Highlight ${current + 1}`}
-                fill
-                className="object-cover rounded-xl"
-                priority
-              />
-            </div>
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-6xl">
-              <svg className="w-24 h-24" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M8 15l3-3 4 4" />
-                <circle cx="8.5" cy="8.5" r="1.5" />
-              </svg>
-            </div>
-          )}
-          {/* Right Arrow */}
-          <button
-            onClick={next}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100 z-10"
-            aria-label="Next"
-          >
-            &#8594;
-          </button>
-        </div>
-        {/* Dots and Photo Count */}
-        <div className="flex flex-col items-center mt-4">
-          <div className="flex gap-2 mb-1">
-            {carouselImages.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrent(idx)}
-                className={`w-3 h-3 rounded-full ${idx === current ? 'bg-[#FF5F05]' : 'bg-gray-300'}`}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-          <div className="text-gray-600 text-sm">
-            Photo {current + 1} of {carouselImages.length}
-          </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-6 py-14 sm:px-10 sm:py-20">
+        <h2 className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">Team Photos</h2>
+        <div className="grid gap-8 md:grid-cols-3">
+          {highlights.map((item) => <figure key={item.image}><div className="relative aspect-[4/3] overflow-hidden rounded"><Image src={item.image} alt={`Illinois water polo team — ${item.title}`} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" /></div><figcaption className="mt-4 border-l-2 border-[#FF5F05] pl-3 text-sm font-semibold">{item.title}</figcaption></figure>)}
         </div>
       </section>
     </div>

@@ -114,3 +114,12 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Stack game details within each row on phones; retain desktop tables. */
+@media (max-width: 639px) {
+  .mobile-game-table, .mobile-game-table tbody { display: block; width: 100%; }
+  .mobile-game-table thead { display: none; }
+  .mobile-game-table tr { display: block; padding: 0.75rem 1rem; border-bottom: 1px solid #e5e7eb; }
+  .mobile-game-table td { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 0.75rem; padding: 0.375rem 0; border: 0; white-space: normal; overflow-wrap: anywhere; }
+  .mobile-game-table td::before { content: attr(data-label); color: #6b7280; font-size: 0.875rem; font-weight: 500; }
+}

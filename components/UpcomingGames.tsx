@@ -3,17 +3,6 @@ type Tournament = { name: string; location: string; dates: string; note?: string
 
 const tournaments: Tournament[] = [
   {
-    name: "Tournament 1",
-    location: "Site TBD",
-    dates: "Dates TBD",
-    games: [
-      { day: "Saturday", time: "11:15 AM", matchup: "University of Illinois vs Indiana University" },
-      { day: "Saturday", time: "2:30 PM", matchup: "Purdue University vs University of Illinois" },
-      { day: "Saturday", time: "8:15 PM", matchup: "University of Iowa vs University of Illinois" },
-      { day: "Sunday", time: "10:00 AM", matchup: "University of Illinois vs Indiana University" },
-    ],
-  },
-  {
     name: "University of Michigan Tournament",
     location: "University of Michigan, Ann Arbor, MI",
     dates: "October 10-11, 2026",
@@ -47,7 +36,7 @@ export default function UpcomingGames() {
             </div>
             {tournament.note && <p className="border-b border-orange-200 bg-orange-50 px-4 py-3 text-sm font-medium text-gray-700">{tournament.note}</p>}
             {tournament.games.length > 0 && <div className="overflow-x-auto">
-              <table className="min-w-full">
+              <table className="mobile-game-table min-w-full">
                 <thead className="bg-gray-100"><tr>
                   <th className="px-4 py-3 text-left font-semibold text-gray-700">Date</th>
                   <th className="px-4 py-3 text-left font-semibold text-gray-700">Time</th>
@@ -56,10 +45,10 @@ export default function UpcomingGames() {
                 </tr></thead>
                 <tbody>{tournament.games.map((game, index) => (
                   <tr key={`${game.day}-${game.time}`} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                    <td className="whitespace-nowrap border-b px-4 py-3 text-gray-800">{game.day}</td>
-                    <td className="whitespace-nowrap border-b px-4 py-3 text-gray-800">{game.time}</td>
-                    <td className="border-b px-4 py-3 text-gray-800">{game.matchup}</td>
-                    {showsGameNumber && <td className="whitespace-nowrap border-b px-4 py-3 text-gray-800">{game.gameNumber}</td>}
+                    <td data-label="Date" className="whitespace-nowrap border-b px-4 py-3 text-gray-800">{game.day}</td>
+                    <td data-label="Time" className="whitespace-nowrap border-b px-4 py-3 text-gray-800">{game.time}</td>
+                    <td data-label="Matchup" className="border-b px-4 py-3 text-gray-800">{game.matchup}</td>
+                    {showsGameNumber && <td data-label="Game / Place" className="whitespace-nowrap border-b px-4 py-3 text-gray-800">{game.gameNumber}</td>}
                   </tr>
                 ))}</tbody>
               </table>
