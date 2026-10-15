@@ -3,7 +3,7 @@ import { Instagram, ArrowUpRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#faf9f6] text-[#13294B]">
-      <div className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-12">
+      <div className="site-container py-10 sm:py-12">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
             <p className="text-lg font-bold tracking-tight">Illinois Men’s Water Polo</p>

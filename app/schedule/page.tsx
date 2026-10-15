@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader"
 
 export default function Schedule() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="site-container py-8">
       <PageHeader title="Schedule & Results" />
       <UpcomingGames />
       <GameResults />

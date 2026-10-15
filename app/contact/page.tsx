@@ -30,7 +30,7 @@ export default function ContactPage() {
 
   return (
     <section className="min-h-screen bg-gray-100 py-12">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="site-container">
         <h1 className="text-4xl font-bold text-[#13294B] mb-2 text-center mb-16">Contact Us</h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

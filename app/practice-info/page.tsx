@@ -5,7 +5,7 @@ import PageHeader from "@/components/PageHeader"
 
 export default function PracticeInfo() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="site-container py-8">
       <PageHeader title="Practice Info" />
       <section className="mb-8 rounded-xl border border-orange-100 bg-orange-50 p-6">
         <h2 className="text-2xl font-bold text-[#13294B]">Join the Team</h2>

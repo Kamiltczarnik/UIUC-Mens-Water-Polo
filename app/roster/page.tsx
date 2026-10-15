@@ -1310,7 +1310,7 @@ export default function Roster() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-10">
-      <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-4 sm:p-8">
+      <div className="site-container bg-white py-8">
         <div className="flex flex-wrap gap-4 justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-[#13294B]">Team Roster</h1>
           <div className="flex flex-wrap gap-2">
