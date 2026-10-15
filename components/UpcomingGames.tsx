@@ -3,14 +3,14 @@ type Tournament = { name: string; location: string; dates: string; note?: string
 
 const tournaments: Tournament[] = [
   {
-    name: "University of Michigan Tournament",
-    location: "University of Michigan, Ann Arbor, MI",
+    name: "West Conference Tournament",
+    location: "University of Iowa, Iowa City, IA",
     dates: "October 10-11, 2026",
     games: [
-      { day: "Saturday, Oct. 10", time: "2:05 PM", matchup: 'University of Michigan "B" vs University of Illinois' },
-      { day: "Saturday, Oct. 10", time: "4:50 PM", matchup: "University of Illinois vs Michigan State University" },
-      { day: "Saturday, Oct. 10", time: "7:35 PM", matchup: 'University of Michigan "A" vs University of Illinois' },
-      { day: "Sunday, Oct. 11", time: "2:15 PM", matchup: "University of Illinois vs Ohio State University" },
+      { day: "Saturday, Oct. 10", time: "11:00 AM", matchup: "University of Iowa vs University of Illinois" },
+      { day: "Saturday, Oct. 10", time: "1:10 PM", matchup: "University of Illinois vs Indiana University" },
+      { day: "Sunday, Oct. 11", time: "9:15 AM", matchup: "University of Illinois vs Indiana University" },
+      { day: "Sunday, Oct. 11", time: "1:00 PM", matchup: "University of Iowa vs University of Illinois" },
     ],
   },
   {

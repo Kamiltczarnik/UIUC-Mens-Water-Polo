@@ -1,3 +1,16 @@
+Local development:
+Run npm run dev and open http://localhost:3000.
+
+Build for hosting:
+Run npm run build (or npm run export). The complete static website is
+generated in out/. Upload the contents of out/ to your web host.
+This project uses static export; next start does not serve this output.
+Stop the development server before building because both use .next/.
+
+If copied build folders cause Windows permission errors, stop the server
+and rename .next/ and out/ before retrying. Next.js recreates both folders.
+The .next-backup/ and out-backup/ folders preserve output from the repair.
+
 Need to Do:
 3. Figure out Phone Number
 4. Upcoming Schedule when we get it

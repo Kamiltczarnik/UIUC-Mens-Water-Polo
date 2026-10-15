@@ -42,7 +42,7 @@ export default function SeasonResults() {
       games: [
         { date: "Oct 4", opponent: "Indiana 'A'", score: "W 9-8" },
         { date: "Oct 4", opponent: "Iowa", score: "L 15-16 (OT)" },
-        { date: "Oct 5", opponent: "Indiana 'A'", score: "L 14-8" },
+        { date: "Oct 5", opponent: "Indiana 'A'", score: "L 8-14" },
         { date: "Oct 5", opponent: "Indiana 'B'", score: "W 16-5" },
       ],
     },
@@ -50,10 +50,10 @@ export default function SeasonResults() {
       name: "Ohio State University Tournament",
       dateRange: "September 20-21",
       games: [
-        { date: "Sep 20", opponent: "Purdue", score: "L 10-5" },
-        { date: "Sep 20", opponent: "Michigan State 'A'", score: "L 14-7" },
+        { date: "Sep 20", opponent: "Purdue", score: "L 5-10" },
+        { date: "Sep 20", opponent: "Michigan State 'A'", score: "L 7-14" },
         { date: "Sep 21", opponent: "Michigan State 'B'", score: "W 11-2" },
-        { date: "Sep 21", opponent: "Ohio State", score: "L 15-8" },
+        { date: "Sep 21", opponent: "Ohio State", score: "L 8-15" },
       ],
     },
   ]
