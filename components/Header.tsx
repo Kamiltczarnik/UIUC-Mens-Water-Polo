@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <header className={`${poppins.variable} font-sans bg-[#13294B] text-white py-4`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/blocki.png"
@@ -38,13 +38,13 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-4">
+        <nav className="hidden md:flex items-center gap-8">
           {navItems.map(([label, href]) => (
             <Link
               key={href}
               href={href}
               className="
-                relative px-2 py-1
+                relative py-1
                 font-semibold uppercase tracking-wide
                 text-white
                 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px]
@@ -61,14 +61,14 @@ export default function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button aria-label="Toggle navigation" aria-expanded={isMenuOpen} className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Menu size={24} />
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-[#13294B] py-4 px-4 space-y-2">
+        <nav className="md:hidden mx-auto max-w-7xl bg-[#13294B] py-4 px-6 sm:px-10 space-y-2">
           {navItems.map(([label, href]) => (
             <Link
               key={href}

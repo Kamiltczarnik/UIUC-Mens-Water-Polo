@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const highlights = [
   { image: "/images/team-highlights/wild-bill2025.jpeg", title: "Wild Bill 2025" },
-  { image: "/images/team-highlights/Iowa-teampic.jpeg", title: "On the road at Iowa" },
+  { image: "/images/team-highlights/iowa-team-photo.jpeg", title: "On the road at Iowa" },
   { image: "/images/team-highlights/wild-bill2024.JPG", title: "Wild Bill 2024" },
 ];
 
@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <div className="bg-[#faf9f6] text-[#13294B]">
       <section className="mx-auto grid max-w-7xl lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="flex flex-col justify-center px-6 py-14 sm:px-12 sm:py-20 lg:py-24">
+        <div className="flex flex-col justify-center px-6 py-14 sm:px-10 sm:py-20 lg:py-24">
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-slate-500">University of Illinois Urbana-Champaign</p>
           <div className="mb-6 h-1 w-12 bg-[#FF5F05]" />
           <h1 className="text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl xl:text-7xl">Illinois<br />Men’s Water Polo</h1>
@@ -21,7 +21,7 @@ export default function Hero() {
             <Link href="/about/" className="py-3 font-semibold underline decoration-[#FF5F05] underline-offset-8 hover:text-[#c44700]">Get to know us</Link>
           </div>
         </div>
-        <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[500px]">
+        <div className="relative aspect-[4/3] mx-6 sm:mx-10 lg:ml-0 lg:aspect-auto lg:min-h-[500px]">
           <Image src="/images/OSU-2025.jpeg" alt="Illinois men’s water polo team together at Ohio State" fill priority sizes="(min-width: 1024px) 55vw, 100vw" className="object-contain" />
         </div>
       </section>

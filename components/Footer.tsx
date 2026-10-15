@@ -1,28 +1,18 @@
-import Link from "next/link";
-import { Instagram, Twitter, Facebook } from "lucide-react";
+import { Instagram, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#13294B] text-white py-6">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center mb-4 md:mb-0 space-x-4">
-            <p className="text-sm">illinoismenswaterpolo@gmail.com</p>
-            <Link
-              href="https://www.instagram.com/illinimenswaterpolo/"
-              target="_blank"
-              aria-label="Instagram">
-              <Instagram className="h-6 w-6 transition ease-in-out duration-200 transform hover:scale-110 hover:text-[#E84A27]" />
-            </Link>
-          </div>
-
+    <footer className="border-t border-slate-200 bg-[#faf9f6] text-[#13294B]">
+      <div className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-12">
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <Link
-              href="https://collegiatewaterpolo.org/Club/"
-              target="_blank"
-              className="text-sm uppercase transition-colors duration-200 ease-in-out hover:text-[#E84A27]">
-              CWPA.ORG
-            </Link>
+            <p className="text-lg font-bold tracking-tight">Illinois Men’s Water Polo</p>
+            <a href="mailto:illinoismenswaterpolo@gmail.com" className="mt-2 inline-block break-all text-sm text-slate-600 underline-offset-4 hover:text-[#13294B] hover:underline">illinoismenswaterpolo@gmail.com</a>
+          </div>
+          <div className="flex flex-wrap items-center gap-7">
+            <a href="https://www.instagram.com/illinimenswaterpolo/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium hover:text-[#c44700]"><Instagram size={18} aria-hidden="true" /> Instagram</a>
+            <span aria-hidden="true" className="h-5 w-px bg-slate-300" />
+            <a href="https://collegiatewaterpolo.org/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 text-sm font-medium hover:text-[#c44700]">CWPA <ArrowUpRight size={18} aria-hidden="true" /></a>
           </div>
         </div>
       </div>
